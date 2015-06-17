@@ -1,0 +1,20 @@
+<h1><div class="center">Lovable Uglies</div></h1>
+<br>
+
+<img src="https://s3.amazonaws.com/lovable-uglies-photos-development/uploads/photo/image_url/18/mobydick.jpg" class="center" width="400">
+
+
+<br>
+<br>
+<div class="center">
+	<% @albums.each do |a| %>
+	<%= link_to a.title, album_path(a.id), :class => "album_links" %>
+	<br>
+<% end %>
+</div>
+
+<br>
+<a href="photos/new" class="add_photo_link">Add a new photo</a>
+<br>
+<a href="albums/new" class="add_album_link">Add a new album</a>
+

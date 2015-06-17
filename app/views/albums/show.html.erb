@@ -1,0 +1,14 @@
+<a href="/">Back</a>
+
+<ul>
+<% @album.photos.each do |p| %>
+
+	<%= image_tag p.image_url.url, width: 400 %>
+		<br />
+		<div id="caption">
+		 <%= p.caption %>
+		</div>
+		<br />
+
+<% end %>
+</ul>

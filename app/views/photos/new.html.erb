@@ -1,0 +1,20 @@
+<br>
+<br>
+<a href="/">Home</a>
+
+<h1>Add a new photo</h1>
+
+<%= form_for @photo do |p| %>
+
+	<%= p.label :caption %>
+ 	<%= p.text_area :caption, :placeholder => "\"Whales!\"" %>
+ 	<br>
+ 	<%= p.label :album_id %>
+ 	<%= p.collection_select :album_id, Album.all, :id, :title, prompt: "Select an album" %>
+ 	<br>
+ 	<%= p.label :image_url %>
+ 	<%= p.file_field :image_url %>
+ 	<br>
+ 	<%= p.submit 'Add Photo' %>
+
+<% end %>
